@@ -1,0 +1,11 @@
+workflows:
+  build-flet-android:
+    name: Build Flet Android App
+    environment:
+      python: "3.12"
+    scripts:
+      - pip install flet flet-cli
+      - flet doctor
+      - flet pack
+    artifacts:
+      - dist/**/*.apk

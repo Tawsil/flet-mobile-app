@@ -1,0 +1,8 @@
+{
+      "name": "Flet Mobile App",
+        "entrypoint": "main.py",
+          "platforms": ["android"],
+            "icon": "icon.png",
+              "bundle_id": "com.tawsil.fletapp",
+                "version": "1.0.0"
+}
