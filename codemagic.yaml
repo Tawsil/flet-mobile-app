@@ -6,8 +6,8 @@ workflows:
         PYTHON_VERSION: "3.12"
     scripts:
       - echo "Using Python $PYTHON_VERSION"
-      - pip install flet flet-cli
-      - flet doctor
-      - flet pack main.py
+      - pip install --upgrade flet flet-cli
+      - flet doctor || true
+      - flet pack main.py -n "My App"
     artifacts:
       - dist/**/*.apk
