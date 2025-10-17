@@ -8,6 +8,6 @@ workflows:
       - echo "Using Python $PYTHON_VERSION"
       - pip install flet flet-cli
       - flet doctor
-      - flet pack
+      - flet pack main.py
     artifacts:
       - dist/**/*.apk
