@@ -1,7 +1,7 @@
 import flet as ft
 import sqlite3
 import json
-from datetime import datetime
+from datetime import datetime, timedelta
 import os
 import shutil
 from typing import Optional, List, Dict, Any
@@ -8651,5 +8651,6 @@ def main(page: ft.Page):
     # تشغيل التطبيق
     start_app()
 
-# تشغيل التطبيق
-ft.app(target=main)
+if __name__ == "__main__":
+    # تشغيل التطبيق فقط عند تنفيذ الملف مباشرةً، وليس عند الاستيراد في اختبارات أو وحدات أخرى
+    ft.app(target=main)
