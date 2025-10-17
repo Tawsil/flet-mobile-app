@@ -2,8 +2,10 @@ workflows:
   build-flet-android:
     name: Build Flet Android App
     environment:
-      python: "3.12"
+      vars:
+        PYTHON_VERSION: "3.12"
     scripts:
+      - echo "Using Python $PYTHON_VERSION"
       - pip install flet flet-cli
       - flet doctor
       - flet pack
