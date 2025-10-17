@@ -7,6 +7,7 @@ workflows:
     scripts:
       - echo "Using Python $PYTHON_VERSION"
       - pip install --upgrade flet flet-cli
+      - pip install pyinstaller  # ← أضف هذا السطر هنا
       - flet doctor || true
       - flet pack main.py -n "My App"
     artifacts:
